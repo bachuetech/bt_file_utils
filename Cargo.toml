@@ -1,0 +1,15 @@
+[package]
+name = "bt_file_utils"
+version = "0.1.0"
+edition = "2021"
+authors = ["calvarez <calvarez@bachuetech.biz>"]
+description = "Basic file read operation. Returns string with file. File is either a relative location or pass via environment variable"
+keywords = ["filesystem","file","I/O"]
+categories = ["filesystem"]
+repository = "https://github.com/bachuetech/"
+readme = "README.md"
+homepage = "https://github.com/bachuetech/"
+license = "GPL-3.0-only"
+
+[dependencies]
+bt_logger = "0.2.1"
