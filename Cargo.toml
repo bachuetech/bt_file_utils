@@ -6,9 +6,9 @@ authors = ["calvarez <calvarez@bachuetech.biz>"]
 description = "Basic file read operation. Returns string with file. File is either a relative location or pass via environment variable"
 keywords = ["filesystem","file","I/O"]
 categories = ["filesystem"]
-repository = "https://github.com/bachuetech/"
+repository = "https://github.com/bachuetech/bt_file_utils"
 readme = "README.md"
-homepage = "https://github.com/bachuetech/"
+homepage = "https://github.com/bachuetech/bt_file_utils"
 license = "GPL-3.0-only"
 
 [dependencies]
