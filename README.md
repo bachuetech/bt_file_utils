@@ -14,6 +14,8 @@ let file_content = get_file(env_variable, or_file_name);
     * Initial Release
 * 0.1.1
     * Use Rust 2024 Edition
+* 0.1.2
+    * Update dependencies
 
 ## License
 GPL-3.0-only

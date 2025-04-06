@@ -1,6 +1,6 @@
 [package]
 name = "bt_file_utils"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2024"
 authors = ["calvarez <calvarez@bachuetech.biz>"]
 description = "Basic file read operation. Returns string with file. The file is either a relative location or passes via an environment variable"
@@ -12,4 +12,4 @@ homepage = "https://github.com/bachuetech/bt_file_utils"
 license = "GPL-3.0-only"
 
 [dependencies]
-bt_logger = "0.2.1"
+bt_logger = "0.2.3"
