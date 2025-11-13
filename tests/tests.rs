@@ -6,7 +6,7 @@ use bt_logger::{build_logger, LogLevel, LogTarget};
 
 #[test]
 fn test_relative_location(){
-    build_logger("BACHUETECH", "BT.FILE.UTILS", LogLevel::VERBOSE, LogTarget::STD_ERROR );
+    build_logger("BACHUETECH", "BT.FILE.UTILS", LogLevel::VERBOSE, LogTarget::STD_ERROR, None );
 
     let content = get_file("fake_variable", "test_files/t_file.txt");
     println!("Content {:?}",&content);
@@ -15,7 +15,7 @@ fn test_relative_location(){
 
 #[test]
 fn test_env_variable(){
-    build_logger("BACHUETECH", "BT.FILE.UTILS", LogLevel::VERBOSE, LogTarget::STD_ERROR );
+    build_logger("BACHUETECH", "BT.FILE.UTILS", LogLevel::VERBOSE, LogTarget::STD_ERROR, None);
 
     let file_loc_var = "file_loc";
 
@@ -30,7 +30,7 @@ fn test_env_variable(){
 
 #[test]
 fn test_negative(){
-    build_logger("BACHUETECH", "BT.FILE.UTILS", LogLevel::VERBOSE, LogTarget::STD_ERROR );
+    build_logger("BACHUETECH", "BT.FILE.UTILS", LogLevel::VERBOSE, LogTarget::STD_ERROR, None );
 
     let content = get_file("fake_variable", "fake_location/t_file.txt");
     assert!(content.is_err());
