@@ -22,6 +22,8 @@ let file_content = get_file(env_variable, or_file_name);
     * Change of Error type returned by get_file to Box<dyn Error>
     * New function to unzip a file to a temp directory temp_unzip
     * Update dependencies
+* 0.2.1
+    * Update dependencies    
 
 ## License
 GPL-3.0-only

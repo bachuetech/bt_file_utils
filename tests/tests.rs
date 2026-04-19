@@ -41,12 +41,14 @@ mod unzip_tests {
     use std::error::Error;
 
     use bt_file_utils::temp_unzip;
+    use bt_logger::{LogLevel, LogTarget, build_logger, log_verbose};
 
     const TEST_ZIP_FILE: &str = "test_files/t_file.zip";
     #[test]
     fn unzip_extracts_files() -> Result<(), Box<dyn Error>> {
         let out_dir = temp_unzip(TEST_ZIP_FILE)?;
-
+        build_logger("BACHUETECH", "BT.FILE.UTILS", LogLevel::VERBOSE, LogTarget::STD_ERROR, None );
+        log_verbose!("unzip_extracts_files", "Dir: {:?}",out_dir);
         let file1 = std::fs::read_to_string(out_dir.path().join("t_file.txt"))?;
 
         assert_eq!(file1, "Hello World!");
