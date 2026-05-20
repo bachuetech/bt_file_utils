@@ -24,6 +24,8 @@ let file_content = get_file(env_variable, or_file_name);
     * Update dependencies
 * 0.2.1
     * Update dependencies    
+* 0.2.2
+    * Update dependencies   
 
 ## License
 GPL-3.0-only
