@@ -19,13 +19,15 @@ let file_content = get_file(env_variable, or_file_name);
 * 0.1.3
     * Update dependencies
 * 0.2.0
-    * Change of Error type returned by get_file to Box<dyn Error>
+    * Change of Error type returned by get_file to AnyErr
     * New function to unzip a file to a temp directory temp_unzip
     * Update dependencies
 * 0.2.1
     * Update dependencies    
 * 0.2.2
     * Update dependencies   
+* 0.3.0
+    * Update dependencies. Move from Box<dyn Error> to BT AnyErr.
 
 ## License
 GPL-3.0-only

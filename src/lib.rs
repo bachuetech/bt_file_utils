@@ -1,10 +1,11 @@
-use std::{env, fs::{self, File},  error::Error};
+use std::{env, fs::{self, File}};
 
+use bt_any_error::any_err::AnyErr;
 use bt_logger::get_error;
 use tempfile::TempDir;
 use zip::ZipArchive;
 
-pub fn get_file(env_variable: &str, or_file_name: &str) -> Result<String, Box<dyn Error>>{
+pub fn get_file(env_variable: &str, or_file_name: &str) -> Result<String, AnyErr>{
     let file_to_read: String;
     let error_msg: String;
 
@@ -20,7 +21,7 @@ pub fn get_file(env_variable: &str, or_file_name: &str) -> Result<String, Box<dy
 }
 
 ///Temporarily unzip a file. File is unzip in a temp directory
-pub fn temp_unzip(zip_path: &str) -> Result<TempDir, Box<dyn Error>>{
+pub fn temp_unzip(zip_path: &str) -> Result<TempDir, AnyErr>{
     let file = File::open(zip_path)?;
     let mut zip = ZipArchive::new(file)?;
 
