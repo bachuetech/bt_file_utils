@@ -28,6 +28,9 @@ let file_content = get_file(env_variable, or_file_name);
     * Update dependencies   
 * 0.3.0
     * Update dependencies. Move from Box<dyn Error> to BT AnyErr.
+* 0.3.1
+* 0.3.2
+    * Update dependencies. Fix issues due to changes in dependencies.
 
 ## License
 GPL-3.0-only

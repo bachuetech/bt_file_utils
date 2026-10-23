@@ -28,15 +28,20 @@ pub fn temp_unzip(zip_path: &str) -> Result<TempDir, AnyErr>{
     let dir = TempDir::new()?;
     for i in 0..zip.len() {
         let mut f = zip.by_index(i)?;
-        let out = dir.path().join(f.name());
+        //let out = dir.path().join(f.name());
 
-        if f.name().ends_with('/') {
-            std::fs::create_dir_all(&out)?;
+        let outpath = match f.enclosed_name() {
+            Some(path) => dir.path().join(path),
+            None => continue,
+        };        
+
+        if f.name().unwrap_or_default().ends_with('/') {
+            std::fs::create_dir_all(&outpath)?;
         } else {
-            if let Some(p) = out.parent() {
+            if let Some(p) = outpath.parent() {
                 std::fs::create_dir_all(p)?;
             }
-            let mut out_file = File::create(&out)?;
+            let mut out_file = File::create(&outpath)?;
             std::io::copy(&mut f, &mut out_file)?;
         }
     }
